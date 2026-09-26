@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9 Biology - Chapter 1: Cell - Its Structure and Functions (100 Marks Assessment)</title>
+    <style>
+        :root {
+            --primary: #1b4d3e;
+            --secondary: #2bb673;
+            --accent: #ff6b6b;
+            --bg-light: #f4f9f6;
+            --text-color: #2c3e50;
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), #113227);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        header p { margin: 0.5rem 0 0; font-size: 0.95rem; opacity: 0.9; }
+
+        .container {
+            max-width: 850px;
+            margin: 1.5rem auto;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+        
+        .score-board {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 15px;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .quiz-card {
+            background: #f9fcfa;
+            border: 1px solid #d4ede2;
+            padding: 1.2rem;
+            margin: 1.2rem 0;
+            border-radius: 10px;
+        }
+        .quiz-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 10px 0;
+            display: block;
+        }
+        .quiz-options button {
+            display: block;
+            width: 100%;
+            padding: 10px 12px;
+            margin: 6px 0;
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 0.92rem;
+            transition: all 0.2s;
+        }
+        .quiz-options button:hover { background: #e2e8f0; }
+        
+        .feedback {
+            margin-top: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 8px;
+            border-radius: 6px;
+            display: none;
+        }
+        .explanation {
+            margin-top: 6px;
+            font-size: 0.88rem;
+            color: #475569;
+            background: #f1f5f9;
+            padding: 8px;
+            border-radius: 6px;
+            display: none;
+        }
+
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 25px;
+            right: 20px;
+            z-index: 99;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--primary);
+            color: white;
+            margin-top: 3rem;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Telangana SCERT Class 9 Biology</h1>
+        <p>Chapter 1: Cell - Its Structure and Functions | Complete 100-Mark Assessment</p>
+    </header>
+
+    <div class="container">
+        <div class="score-board" id="scoreBoard">
+            Total Score: 0 / 100 | Percentage: 0.0%
+        </div>
+
+        <p style="text-align:center; font-weight:500;">Answer all 100 questions below. Each question is worth 1 mark. Select an option to see instant evaluation, correct/wrong status, and detailed scientific explanations based strictly on Chapter 1.</p>
+
+        <div id="quiz-container">
+            <!-- Dynamically generated 100 questions script-driven or rendered for complete coverage -->
+        </div>
+    </div>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()" title="Scroll to Top">▲</button>
+
+    <footer>
+        <p>&copy; 2026 Telangana SCERT Biology Curriculum Companion</p>
+    </footer>
+
+    <script>
+        let totalScore = 0;
+        const maxScore = 100;
+        let answered = {};
+
+        // Generate 100 accurate questions derived strictly from Chapter 1 text
+        const questionsData = [
+            // Q1 - Q15: General / Microscopic & Typical Cell
+            { id: 'q1', q: "1. Who is quoted at the beginning of the biology textbook regarding nature being an excellent schoolmaster?", options: ["John Lubbock", "Robert Brown", "Robert Hooke", "Galileo"], correct: "John Lubbock", exp: "John Lubbock's quote appears on the opening page of the textbook." },
+            { id: 'q2', q: "2. What shape do onion peel cells typically appear under a microscope?", options: ["Irregular", "Rectangular", "Circular", "Star-shaped"], correct: "Rectangular", exp: "Onion cells are nearly rectangular in shape." },
+            { id: 'q3', q: "3. What shape do human cheek cells typically exhibit?", options: ["Rectangular", "Hexagonal", "Irregular", "Spiral"], correct: "Irregular", exp: "Cheek cells are irregular in shape." },
+            { id: 'q4', q: "4. Which microscope reveals finer internal details like double-membranes and cristae?", options: ["Compound microscope", "Simple microscope", "Electron microscope", "Dissecting microscope"], correct: "Electron microscope", exp: "Electron microscopes reveal fine internal ultrastructures." },
+            { id: 'q5', q: "5. Which organelle is typically shown in plant cell models but is absent in non-green plant cells?", options: ["Mitochondria", "Chloroplast", "Nucleus", "Ribosome"], correct: "Chloroplast", exp: "Chloroplasts are mostly found in cells of green leaves and tender stems, not all plant cells." },
+            { id: 'q6', q: "6. According to Galileo, what is scientific learning equivalent to?", options: ["Memorizing equations", "Improving the ability of questioning", "Collecting rock specimens", "Writing long essays"], correct: "Improving the ability of questioning", exp: "Galileo stated that scientific learning is nothing but improving the ability of questioning." },
+            { id: 'q7', q: "7. Which National Curriculum Framework emphasizes linking science teaching with the local environment?", options: ["NCF-2000", "NCF-2005", "NCF-2010", "NCF-2018"], correct: "NCF-2005", exp: "NCF-2005 emphasizes linking science teaching with the local environment." },
+            { id: 'q8', q: "8. What is the national helpline number mentioned for child welfare in the textbook?", options: ["108", "1098", "100", "104"], correct: "1098", exp: "Childline Foundation helpline number is 1098." },
+            { id: 'q9', q: "9. What is the award amount given to each selected student under the INSPIRE national programme?", options: ["Rs. 1000/-", "Rs. 5000/-", "Rs. 10000/-", "Rs. 2000/-"], correct: "Rs. 5000/-", exp: "Each selected student is awarded with Rs. 5000/- under INSPIRE." },
+            { id: 'q10', q: "10. In a typical plant cell diagram, which outer boundary layer sits outside the plasma membrane?", options: ["Cell wall", "Nuclear membrane", "Capsule", "Slime layer"], correct: "Cell wall", exp: "In plant cells, there is an extra layer over the cell membrane known as the cell wall." },
+            { id: 'q11', q: "11. What is the primary material composing the plant cell wall?", options: ["Chitin", "Cellulose", "Peptidoglycan", "Pectin"], correct: "Cellulose", exp: "The cell wall in plant cells is made mainly of cellulose." },
+            { id: 'q12', q: "12. What primary effect does salt solution have when placed over Rheo leaf peel?", options: ["Swelling of cells", "Shrinking of cytoplasm and plasma membrane", "Bursting of cell wall", "Dissolution of nucleus"], correct: "Shrinking of cytoplasm and plasma membrane", exp: "Salt solution causes water inside cells to come out, shrinking the cytoplasm along with the cell membrane." },
+            { id: 'q13', q: "13. What is the outer boundary of the coloured area separated from the cell wall during plasmolysis called?", options: ["Nuclear membrane", "Cell membrane / plasma membrane", "Tonoplast", "Endoplasmic reticulum"], correct: "Cell membrane / plasma membrane", exp: "The outer boundary of the coloured area is actually the cell membrane or plasma membrane." },
+            { id: 'q14', q: "14. What chemical substances mainly make up the flexible cell membrane?", options: ["Lipids and proteins", "Cellulose and starch", "DNA and RNA", "Calcium and magnesium"], correct: "Lipids and proteins", exp: "Cell membrane is flexible and is made up of mainly lipids and proteins." },
+            { id: 'q15', q: "15. Why is the plasma membrane referred to as a selectively permeable membrane?", options: ["It allows all substances to pass freely", "It does not allow any substance to pass", "It controls the exchange of substances very selectively", "It dissolves all chemicals entering it"], correct: "It controls the exchange of substances very selectively", exp: "The exchange of substances happens very selectively, hence it is known as selectively permeable membrane." },
+
+            // Q16 - Q30: Cell Wall & Nucleus
+            { id: 'q16', q: "16. What physical property does the plant cell wall possess despite being tough?", options: ["Rigid and impermeable", "Porous and flexible", "Sticky and waterproof", "Dissolvable in water"], correct: "Porous and flexible", exp: "The cell wall is a tough but flexible porous layer." },
+            { id: 'q17', q: "17. What pressure does the cell wall exert to resist outward pressure exerted by cell sap?", options: ["Outward wall pressure", "Inward wall pressure", "Osmotic vacuum", "Hydrostatic suction"], correct: "Inward wall pressure", exp: "It exerts an inward wall pressure to resist outward pressure exerted by the cell sap." },
+            { id: 'q18', q: "18. Who discovered and named the nucleus in cells?", options: ["Robert Hooke", "Robert Brown", "Rudolf Virchow", "Camillo Golgi"], correct: "Robert Brown", exp: "The dark-coloured dot in cells (nucleus) was named by Robert Brown in 1831." },
+            { id: 'q19', q: "19. In what year was the nucleus discovered and named?", options: ["1665", "1831", "1855", "1898"], correct: "1831", exp: "Robert Brown named it in the year 1831." },
+            { id: 'q20', q: "20. What is the nucleus commonly referred to as within a cell?", options: ["Powerhouse", "Control room", "Suicidal bag", "Packaging center"], correct: "Control room", exp: "The nucleus is known as the cell's control room." },
+            { id: 'q21', q: "21. What did Schleiden call the nucleus, believing new cells were created from it?", options: ["Cytoblast", "Protoplast", "Centrosome", "Nucleolus"], correct: "Cytoblast", exp: "Schleiden thought new cells were created from the nucleus and called it cytoblast." },
+            { id: 'q22', q: "22. Which cells in mammals lack a nucleus when mature?", options: ["White blood cells", "Red blood cells", "Platelets", "Muscle cells"], correct: "Red blood cells", exp: "Red blood cells in mammals are examples of cells that do not have a nucleus." },
+            { id: 'q23', q: "23. Which plant cells lack a nucleus at maturity?", options: ["Xylem vessels", "Phloem sieve tube", "Palisade cells", "Root hair cells"], correct: "Phloem sieve tube", exp: "Phloem sieve tube in plants does not have a nucleus." },
+            { id: 'q24', q: "24. What are cells with an organized, membrane-bound nucleus called?", options: ["Prokaryotic cells", "Eukaryotic cells", "Acellular cells", "Mesokaryotic cells"], correct: "Eukaryotic cells", exp: "Cells with an organized nucleus are Eukaryotic cells." },
+            { id: 'q25', q: "25. What are cells without an organized nuclear membrane called?", options: ["Eukaryotic cells", "Prokaryotic cells", "Plastids", "Gametes"], correct: "Prokaryotic cells", exp: "Cells that do not have a nuclear membrane bound nuclear material are prokaryotic cells." },
+            { id: 'q26', q: "26. Which of the following is an example of a prokaryotic cell?", options: ["Amoeba", "Bacterium", "Onion cell", "Cheek cell"], correct: "Bacterium", exp: "Bacterium is a prokaryotic cell." },
+            { id: 'q27', q: "27. Which algae belongs to prokaryotic cells along with bacteria?", options: ["Green algae", "Cyanobacteria (blue-green algae)", "Red algae", "Brown algae"], correct: "Cyanobacteria (blue-green algae)", exp: "Cyanobacteria also belong to this category of prokaryotes." },
+            { id: 'q28', q: "28. What stain is specifically used to observe cheek cells in the laboratory?", options: ["Safranin", "Methylene blue", "Janus Green-B", "Iodine solution"], correct: "Methylene blue", exp: "1% methylene blue is used for staining cheek cells." },
+            { id: 'q29', q: "29. What is the staining chemical used in observing mitochondria in live cells?", options: ["Methylene blue", "Janus Green-B", "Safranin", "Acetocarmine"], correct: "Janus Green-B", exp: "Janus Green-B is used for observing mitochondria." },
+            { id: 'q30', q: "30. What staining solution is used when observing succulent plant stems for vacuoles?", options: ["Dilute safranin solution", "Methylene blue", "Janus Green-B", "Eosin"], correct: "Dilute safranin solution", exp: "Section of cactus stem is stained with dilute safranin solution." },
+
+            // Q31 - Q50: Cytoplasm, Protoplasm & ER
+            { id: 'q31', q: "31. What is the fluid content bounded by the plasma membrane called?", options: ["Nucleoplasm", "Cytoplasm", "Protoplasm", "Matrix"], correct: "Cytoplasm", exp: "The cytoplasm is the fluid content bounded by the plasma membrane." },
+            { id: 'q32', q: "32. What does the term 'protoplasm' historically mean?", options: ["Cell wall", "Life fluid", "Energy source", "Genetic code"], correct: "Life fluid", exp: "Protoplasm means life fluid." },
+            { id: 'q33', q: "33. What is the fluid inside the nucleus called?", options: ["Cytoplasm", "Nucleoplasm or nuclear fluid", "Matrix", "Cell sap"], correct: "Nucleoplasm or nuclear fluid", exp: "The fluid inside the nucleus came to be known as nuclear fluid or nucleoplasm." },
+            { id: 'q34', q: "34. Which membraneless cell organelles are found in both prokaryotes and eukaryotes?", options: ["Mitochondria", "Ribosomes", "Golgi bodies", "Lysosomes"], correct: "Ribosomes", exp: "Except membraneless ribosomes, membrane-bound organelles are absent in prokaryotes." },
+            { id: 'q35', q: "35. What network of membranes is observed throughout the cytoplasm under an electron microscope?", options: ["Golgi apparatus", "Endoplasmic reticulum", "Microtubules", "Centrioles"], correct: "Endoplasmic reticulum", exp: "A network of membranes observed throughout cytoplasm is the endoplasmic reticulum." },
+            { id: 'q36', q: "36. What granule-like structures attached to rough endoplasmic reticulum synthesize proteins?", options: ["Lysosomes", "Ribosomes", "Centrosomes", "Vesicles"], correct: "Ribosomes", exp: "Rough ER has ribosomes on its surface, which are sites of protein synthesis." },
+            { id: 'q37', q: "37. What is the function of Smooth Endoplasmic Reticulum (SER)?", options: ["Protein synthesis", "Manufacture of fat molecules or lipids", "Photosynthesis", "Digestion of cell waste"], correct: "Manufacture of fat molecules or lipids", exp: "The SER helps in the manufacture of fat molecules or lipids." },
+            { id: 'q38', q: "38. What crucial role does SER play in vertebrate liver cells?", options: ["Producing bile", "Detoxifying many poisons and drugs", "Storing glycogen", "Filtering blood"], correct: "Detoxifying many poisons and drugs", exp: "In vertebrate liver cells SER plays a crucial role in detoxifying many poisons and drugs." },
+            { id: 'q39', q: "39. Who observed the Golgi apparatus in 1898 using a compound microscope?", options: ["Robert Brown", "Camillo Golgi", "Rudolf Virchow", "Theodor Schwann"], correct: "Camillo Golgi", exp: "Camillo Golgi had observed this organelle in the year 1898." },
+            { id: 'q40', q: "40. What is the primary function of the Golgi apparatus?", options: ["Generating ATP", "Packing various substances before transport", "Storing genetic code", "Destroying cell parts"], correct: "Packing various substances before transport", exp: "The function of golgi bodies is to pack various substances before they are transported." },
+
+            // Q51 - Q70: Lysosomes, Mitochondria & Plastids
+            { id: 'q41', q: "41. What are lysosomes popularly known as due to their destructive enzymes?", options: ["Powerhouses of the cell", "Control rooms", "Suicidal bags of the cell", "Storage sacs"], correct: "Suicidal bags of the cell", exp: "Lysosomes are known as the suicidal bags of the cell." },
+            { id: 'q42', q: "42. What shape are mitochondria typically when viewed under a microscope?", options: ["Spherical or cylindrical dots", "Perfect squares", "Long spiral threads", "Star-shaped"], correct: "Spherical or cylindrical dots", exp: "Mitochondria appear as oval or cylindrical dots in the cell." },
+            { id: 'q43', q: "43. What is the typical length of a mitochondrion?", options: ["0.1 to 0.5 micron", "2 to 8 micron", "10 to 20 micron", "50 to 100 micron"], correct: "2 to 8 micron", exp: "Generally a mitochondrion is 2-8 micron long." },
+            { id: 'q44', q: "44. What are the inner membrane folds of mitochondria called?", options: ["Grana", "Cristae", "Stroma", "Vesicles"], correct: "Cristae", exp: "Inner membrane forms structures called cristae." },
+            { id: 'q45', q: "45. What is the space between cristae inside mitochondria known as?", options: ["Matrix", "Lumen", "Cytoplasm", "Nucleoplasm"], correct: "Matrix", exp: "The space between cristae is known as the matrix." },
+            { id: 'q46', q: "46. Why are mitochondria known as powerhouses of the cell?", options: ["They store water", "They perform cellular respiration to derive energy", "They protect the cell from bacteria", "They control cell division"], correct: "They perform cellular respiration to derive energy", exp: "Mitochondria are responsible for cellular respiration, deriving energy; hence powerhouses." },
+            { id: 'q47', q: "47. What are ribosomes composed of?", options: ["RNA and proteins", "Lipids and carbohydrates", "Cellulose only", "DNA only"], correct: "RNA and proteins", exp: "Ribosomes are formed of RNA proteins." },
+            { id: 'q48', q: "48. Where are plastids exclusively found?", options: ["Animal cells", "Plant cells", "Bacterial cells", "Viral particles"], correct: "Plant cells", exp: "Plastids are present only in plant cells." },
+            { id: 'q49', q: "49. What are the three main types of plastids?", options: ["Chloroplasts, chromoplasts, leucoplasts", "Amyloplasts, elaioplasts, proteinoplasts", "Rer, ser, golgi", "Matrix, cristae, lumen"], correct: "Chloroplasts, chromoplasts, leucoplasts", exp: "Plastids are mainly of three types: chromoplasts, leucoplasts, and chloroplasts." },
+            { id: 'q50', q: "50. What colour pigment is mainly contained in chloroplasts?", options: ["Carotene", "Chlorophyll", "Anthocyanin", "Xanthophyll"], correct: "Chlorophyll", exp: "Chloroplasts mainly contain green substance called chlorophyll." },
+
+            // Q71 - Q90: Chloroplasts, Vacuoles & Cell Theory
+            { id: 'q51', q: "51. What is the primary function of chloroplasts?", options: ["Protein synthesis", "Trap sunlight energy and carry out photosynthesis", "Detoxify drugs", "Store cell waste"], correct: "Trap sunlight energy and carry out photosynthesis", exp: "Primary function of chloroplasts is to trap sunlight energy and transform it to chemical energy for photosynthesis." },
+            { id: 'q52', q: "52. What shapes can chloroplasts take in algae?", options: ["Only rectangular", "Ladders, star, spirally coiled or reticulate", "Spherical only", "Triangular"], correct: "Ladders, star, spirally coiled or reticulate", exp: "In algae, chloroplasts can be found as ladders or star or spirally coiled or reticulate structures." },
+            { id: 'q53', q: "53. What is the diameter range of chloroplasts in higher plants?", options: ["1 to 2 micron", "4 to 10 micron", "20 to 50 micron", "100 micron"], correct: "4 to 10 micron", exp: "Diameter of chloroplasts in higher plants can vary between 4 to 10 micron." },
+            { id: 'q54', q: "54. What are fluid-filled sac-like large empty spaces present in plant cells called?", options: ["Vacuoles", "Lysosomes", "Ribosomes", "Centrioles"], correct: "Vacuoles", exp: "The large empty spaces present in the cell are vacuoles, which are fluid-filled sac-like structures." },
+            { id: 'q55', q: "55. How do vacuole sizes compare between plant and animal cells?", options: ["Plant vacuoles are small, animal vacuoles are large", "Plant vacuoles are large, animal vacuoles are small", "Both are equal in size", "Animal cells lack vacuoles entirely"], correct: "Plant vacuoles are large, animal vacuoles are small", exp: "In animal cells vacuoles are small in size while in plant cells they are large." },
+            { id: 'q56', q: "56. What pressure do vacuoles help maintain within the cell?", options: ["Blood pressure", "Turgor pressure", "Atmospheric pressure", "Osmotic vacuum"], correct: "Turgor pressure", exp: "Vacuoles maintain turgur pressure within the cell." },
+            { id: 'q57', q: "57. Who were the two scientists that formulated the cell theory around 1838-39?", options: ["Watson and Crick", "Schleiden and Schwann", "Hooke and Brown", "Darwin and Wallace"], correct: "Schleiden and Schwann", exp: "Matthias Jakob Schleiden and Theodor Schwann formulated the cell theory." },
+            { id: 'q58', q: "58. What was Matthias Schleiden's profession?", options: ["Zoologist", "Botanist", "Physician", "Chemist"], correct: "Botanist", exp: "Schleiden was a Botanist while Schwann was a Zoologist." },
+            { id: 'q59', q: "59. What was Theodor Schwann's profession?", options: ["Botanist", "Zoologist", "Geologist", "Mathematician"], correct: "Zoologist", exp: "Schwann was a Zoologist." },
+            { id: 'q60', q: "60. Approximately how many years of gap was there between Robert Hooke's discovery and the formulation of cell theory?", options: ["50 years", "100 years", "200 years", "500 years"], correct: "200 years", exp: "There was a gap of about 200 years between Robert Hooke first observing cells and cell theory formulation." },
+
+            // Q61 - Q80: Cardinal Principles & True/False
+            { id: 'q61', q: "61. What is the first cardinal principle of modern cell theory?", options: ["All cells have mitochondria", "All living organisms are composed of cells and products of cells", "Cells can arise from non-living matter", "Nucleus controls all activities"], correct: "All living organisms are composed of cells and products of cells", exp: "All living organisms are composed of cells and products of cells." },
+            { id: 'q62', q: "62. What is the second cardinal principle of modern cell theory?", options: ["All cells arise from pre-existing cells", "Cells divide by mitosis", "Plastids make food", "Cell wall gives rigidity"], correct: "All cells arise from pre-existing cells", exp: "All cells arise from pre-existing cells." },
+            { id: 'q63', q: "63. True or False: Plant cells possess an outer cell wall made mainly of cellulose.", options: ["True", "False"], correct: "True", exp: "Plant cells have an outer cell wall composed mainly of cellulose." },
+            { id: 'q64', q: "64. True or False: Prokaryotic cells have a well-defined membrane-bound nucleus.", options: ["True", "False"], correct: "False", exp: "Prokaryotic cells lack a defined membrane-bound nucleus." },
+            { id: 'q65', q: "65. True or False: Lysosomes are membrane-bound sacs filled with digestive enzymes.", options: ["True", "False"], correct: "True", exp: "Lysosomes are membrane-bound sacs filled with digestive enzymes." },
+            { id: 'q66', q: "66. True or False: Mitochondria are known as the kitchen of the cell.", options: ["True", "False"], correct: "False", exp: "Mitochondria are known as powerhouses of the cell; chloroplasts are kitchens." },
+            { id: 'q67', q: "67. True or False: Red blood cells in adult mammals have a distinct nucleus.", options: ["True", "False"], correct: "False", exp: "Mammalian red blood cells lack a nucleus." },
+            { id: 'q68', q: "68. True or False: The cell membrane is a selectively permeable membrane.", options: ["True", "False"], correct: "True", exp: "Plasma membrane is selectively permeable." },
+            { id: 'q69', q: "69. True or False: Chloroplasts are found in animal cells.", options: ["True", "False"], correct: "False", exp: "Plastids and chloroplasts are present only in plant cells." },
+            { id: 'q70', q: "70. True or False: Rudolf Virchow explained that new cells form from pre-existing cells.", options: ["True", "False"], correct: "True", exp: "Rudolf Virchow first explained this in 1855." },
+
+            // Q71 - Q90: Additional Conceptual & Lab Questions
+            { id: 'q71', q: "71. What is the function of leucoplasts?", options: ["Impart green colour", "Colourless plastids for storage", "Trap sunlight", "Digest cell debris"], correct: "Colourless plastids for storage", exp: "Leucoplasts are colourless plastids involved in nutrient storage." },
+            { id: 'q72', q: "72. What is the function of chromoplasts?", options: ["Provide green colour", "Provide coloured pigments to flowers and fruits", "Store starch", "Generate ATP"], correct: "Provide coloured pigments to flowers and fruits", exp: "Chromoplasts are coloured plastids." },
+            { id: 'q73', q: "73. What is the main purpose of adding glycerine when preparing a temporary cheek cell mount?", options: ["To stain the nucleus", "To prevent drying up of the slide", "To kill bacteria", "To dissolve cell walls"], correct: "To prevent drying up of the slide", exp: "Glycerine is added to prevent the slide from drying out." },
+            { id: 'q74', q: "74. Why should you not scrape the inner cheek too hard in the lab?", options: ["It breaks the microscope", "It may injure your buccal mucosa", "It stains the fingers", "It destroys the microscope mirror"], correct: "It may injure your buccal mucosa", exp: "Precautions state: Do not scrape cheek too hard as it may injure your buccal mucosa." },
+            { id: 'q75', q: "75. What is formed when the inner membrane of mitochondria folds inward?", options: ["Thylakoids", "Cristae", "Grana", "Cisternae"], correct: "Cristae", exp: "Inner membrane protrudes into interior in folds called cristae." },
+            { id: 'q76', q: "76. Which organelle number is particularly large in cells that secrete hormones and enzymes?", options: ["Mitochondria", "Golgi bodies", "Vacuoles", "Lysosomes"], correct: "Golgi bodies", exp: "Number of golgi bodies is particularly large in cells that secrete hormones and enzymes." },
+            { id: 'q77', q: "77. What happens to a cell if its plasma membrane ruptures?", options: ["It grows larger", "Internal contents leak out and cell dies", "It becomes prokaryotic", "It divides rapidly"], correct: "Internal contents leak out and cell dies", exp: "Rupture of plasma membrane leads to leakage and cell death." },
+            { id: 'q78', q: "78. What was Robert Hooke's contribution to cell biology?", options: ["Proposed cell theory", "First observed and named cells", "Discovered mitochondria", "Invented electron microscope"], correct: "First observed and named cells", exp: "Robert Hooke first observed cells, leading to a 200-year gap before cell theory." },
+            { id: 'q79', q: "79. What does 'cytoplasm' literally mean in cellular terminology?", options: ["Cell nucleus", "Cell fluid", "Cell wall", "Cell energy"], correct: "Cell fluid", exp: "Cytoplasm means cell fluid." },
+            { id: 'q80', q: "80. What instrument is essential to observe the 3D thickness of cell walls by slightly changing focus?", options: ["Telescope", "Compound microscope", "Periscope", "Spectroscope"], correct: "Compound microscope", exp: "Viewing plant cells on a slide under a microscope and slightly changing focus shows wall thickness." },
+
+            // Q81 - Q100: Final Review & Application Questions
+            { id: 'q81', q: "81. True or False: Prokaryotic cells contain membrane-bound cell organelles.", options: ["True", "False"], correct: "False", exp: "Membrane-bound cell organelles are absent in prokaryotes." },
+            { id: 'q82', q: "82. True or False: Ribosomes are present in prokaryotic cells.", options: ["True", "False"], correct: "True", exp: "Except membraneless ribosomes, other organelles are absent in prokaryotes." },
+            { id: 'q83', q: "83. What is the approximate size comparison of mitochondria to the nucleus?", options: ["Mitochondria are 150 times smaller", "Mitochondria are larger than the nucleus", "Equal size", "1000 times larger"], correct: "Mitochondria are 150 times smaller", exp: "Mitochondrion is about 150 times smaller than the nucleus." },
+            { id: 'q84', q: "84. What is the primary role of nuclear membrane?", options: ["Digest waste", "Enclose nucleus and separate it from cytoplasm", "Produce lipids", "Carry out photosynthesis"], correct: "Enclose nucleus and separate it from cytoplasm", exp: "Nuclear membrane encloses nucleus and separates it from cytoplasm." },
+            { id: 'q85', q: "85. True or False: The internal environment of a cell is maintained distinct from the outside by the cell membrane.", options: ["True", "False"], correct: "True", exp: "Cell membrane protects and maintains specific internal composition." },
+            { id: 'q86', q: "86. What chemical is used to make fresh solution for Janus Green-B activity?", options: ["Salt", "Janus Green-B powder mixed in water", "Methylene blue", "Safranin"], correct: "Janus Green-B powder mixed in water", exp: "Mixing 200mg Janus Green-B in 100ml water." },
+            { id: 'q87', q: "87. True or False: Animal cells have large permanent central vacuoles like plant cells.", options: ["True", "False"], correct: "False", exp: "Animal cells have small vacuoles; plant cells have large vacuoles." },
+            { id: 'q88', q: "88. What term describes cells having an organized nucleus with a nuclear membrane?", options: ["Prokaryotes", "Eukaryotes", "Virus", "Bacteria"], correct: "Eukaryotes", exp: "Eukaryotic cells have an organized nucleus." },
+            { id: 'q89', q: "89. True or False: Schleiden and Schwann believed new cells came from the nucleus.", options: ["True", "False"], correct: "True", exp: "Schleiden called it cytoblast, thinking new cells formed from it." },
+            { id: 'q90', q: "90. What structure connects the nucleus to the cell membrane internally for transport?", options: ["Endoplasmic Reticulum", "Vacuole", "Plastid", "Cell wall"], correct: "Endoplasmic Reticulum", exp: "ER serves as channels for transport of materials within cytoplasm." },
+            { id: 'q91', q: "91. True or False: Plant cells can withstand greater medium changes than animal cells due to their cell wall.", options: ["True", "False"], correct: "True", exp: "Cell wall wall pressure allows plant cells to withstand greater changes." },
+            { id: 'q92', q: "92. What are small, membrane-bound sac structures that transport proteins from ER to Golgi called?", options: ["Vesicles", "Cristae", "Matrix", "Grana"], correct: "Vesicles", exp: "Proteins reach golgi body through fluid-filled vesicles." },
+            { id: 'q93', q: "93. True or False: All living organisms are composed of cells.", options: ["True", "False"], correct: "True", exp: "First cardinal principle of cell theory." },
+            { id: 'q94', q: "94. What is the main pigment involved in trapping sunlight in green plants?", options: ["Hemoglobin", "Chlorophyll", "Melanin", "Carotene"], correct: "Chlorophyll", exp: "Chlorophyll in chloroplasts traps sunlight." },
+            { id: 'q95', q: "95. True or False: Cell organization is crucial for life to reside within an organism.", options: ["True", "False"], correct: "True", exp: "Life resides in cellular organization." },
+            { id: 'q96', q: "96. What structure regulates all cellular functions and determines organism characteristics?", options: ["Nucleus", "Ribosome", "Cell wall", "Vacuole"], correct: "Nucleus", exp: "Nucleus regulates functions and determines characteristics." },
+            { id: 'q97', q: "97. True or False: DNA and genetic material are primarily housed within the nucleus.", options: ["True", "False"], correct: "True", exp: "Almost entire genetic material is found in the nucleus." },
+            { id: 'q98', q: "98. What apparatus stacks membrane-bound vesicles for packaging?", options: ["Golgi apparatus", "Mitochondria", "Ribosome", "Chloroplast"], correct: "Golgi apparatus", exp: "Golgi apparatus consists of stacks of membrane bound vesicles." },
+            { id: 'q99', q: "99. True or False: Scientific learning involves improving the ability of questioning.", options: ["True", "False"], correct: "True", exp: "Galileo quote cited in the introduction." },
+            { id: 'q100', q: "100. What is the fundamental organizational unit of life?", options: ["Tissue", "Organ", "Cell", "Organelle"], correct: "Cell", exp: "The fundamental organizational unit of life is the cell." }
+        ];
+
+        function renderQuiz() {
+            let container = document.getElementById('quiz-container');
+            let html = '';
+            questionsData.forEach((item, index) => {
+                html += `
+                    <div class="quiz-card" id="${item.id}">
+                        <h3>${item.q}</h3>
+                        <div class="quiz-options">
+                `;
+                item.options.forEach(opt => {
+                    // Extract option letter/text for comparison
+                    let optVal = opt.includes(')') ? opt.split(')')[0].trim() : opt;
+                    if(item.options.length === 2) optVal = opt; // For True/False
+                    html += `<button onclick="evaluateAnswer('${item.id}', '${optVal.replace(/'/g, "\\'")}', '${item.correct.replace(/'/g, "\\'")}')">${opt}</button>`;
+                });
+                html += `
+                        </div>
+                        <div class="feedback" id="${item.id}-feedback"></div>
+                        <div class="explanation" id="${item.id}-exp"><strong>Explanation:</strong> ${item.exp}</div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function updateScore() {
+            let percentage = ((totalScore / maxScore) * 100).toFixed(1);
+            document.getElementById('scoreBoard').innerHTML = `Total Score: ${totalScore} / ${maxScore} | Percentage: ${percentage}%`;
+        }
+
+        function evaluateAnswer(qId, selected, correct) {
+            if (answered[qId]) return;
+            answered[qId] = true;
+
+            let fb = document.getElementById(qId + '-feedback');
+            let exp = document.getElementById(qId + '-exp');
+            fb.style.display = 'block';
+            exp.style.display = 'block';
+
+            // Normalize comparison
+            let isCorrect = false;
+            if (selected.toLowerCase() === correct.toLowerCase() || selected.includes(correct)) {
+                isCorrect = true;
+            }
+
+            if (isCorrect) {
+                totalScore += 1;
+                fb.style.background = '#d1fae5';
+                fb.style.color = '#065f46';
+                fb.innerHTML = `✅ Correct! (+1 Mark)`;
+            } else {
+                fb.style.background = '#fee2e2';
+                fb.style.color = '#991b1b';
+                fb.innerHTML = `❌ Incorrect. The correct answer was: ${correct}. (0 Marks)`;
+            }
+            updateScore();
+        }
+
+        window.onload = function() {
+            renderQuiz();
+        };
+
+        window.onscroll = function() {
+            let btn = document.getElementById("scrollTopBtn");
+            if (document.documentElement.scrollTop > 200 || document.body.scrollTop > 200) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
